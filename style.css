@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgb(50 50 50), white);
+    font-family: poppins, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+header > div {
+    margin-block: 6rem 6rem;
+    max-width: 350px;
+    margin-inline: auto;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 1rem 0 rgb(255 255 255 / 0.3);
+
+}
+
+h1 {
+    color: rgb(255 255 255 / 0.6);
+    font-size: 4rem;
+    letter-spacing: 10px;
+    padding-block: 70px;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 4rem 13rem;
+    justify-content: center
+}
+
+
+.container {
+    width: 350px;
+    height: 230px;
+    perspective: 800px;
+    /* perspective should be applied to parent element */
+}
+
+
+
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}   
+
+
+.container:hover > .card {
+    transform: rotateY(180deg) ;
+}
+
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.7rem;
+    backface-visibility: hidden;
+    box-shadow: 0 0 1rem 0 rgb(255 255 255 / 0.3);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.front {
+    background: rgba(207, 28, 28, 0.7);
+    color: black;
+     
+}
+
+.back {
+    background: rgba(0 0 0 / 0);
+    color: white;
+    transform: rotateY(180deg);
+    align-items: stretch;
+}
+
+nav > p {
+    padding-block: 0.4rem;
+    background-color: rgba(0 0 0 / 0);
+    text-align: center;
+}
+
+a:link, a:hover, a:visited, a:active {
+    text-decoration: none;
+    color: rgb(0 0 0 / 0.6);
+    box-shadow: 0 0 3px -2px rgb(0 0 0 / 0.3);
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        grid-template-columns: auto;
+    }
+}
