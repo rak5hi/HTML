@@ -17,7 +17,7 @@ main {
 
 .wrapper {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto;
     justify-content: center;
     gap: 4rem;
 }
@@ -85,13 +85,7 @@ b {
     font-size: 2rem;  
 }
 
-@media (max-width: 414px) {
-    .wrapper {
-        grid-template-columns: auto;
-    }
-}
-
-@media (max-width: 800px) {
+@media (min-width: 800px) {
     .wrapper {
         grid-template-columns: auto auto;
     }
