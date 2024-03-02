@@ -70,6 +70,7 @@ main {
     text-shadow: 0 0 3px black;
     text-align: center;
     padding-inline: 1.4rem;
+    backface-visibility: hidden;
 }
 
 .back {
@@ -77,6 +78,7 @@ main {
     background: rgba(207, 28, 28, 0.7);
     font-size: 1rem;
     text-align: justify;
+    backface-visibility: hidden;
 }
 
 b {
